@@ -1,0 +1,7 @@
+node_modules/
+functions/
+build/
+firebase.json
+.firebaserc
+vapid.json
+.DS_Store

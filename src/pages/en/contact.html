@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../images/logo.ico"
+    />
+
+    <meta
+      name="description"
+      content="This is a test website for PWA by Besjan Sejrani"
+    />
+    <title>Contact | PWA Camera</title>
+  </head>
+
+  <body class="grey lighten-4">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="white" id="nav">
+          <div class="nav-wrapper container">
+            <a href="/" class="brand-logo center"
+              ><img
+                src="../../images/logo.svg"
+                alt="Camera logo"
+                height="50"
+                width="50"
+            /></a>
+
+            <span class="left black-text text-darken-1">
+              <i
+                class=" large material-icons sidenav-trigger"
+                data-target="side-menu"
+                >menu</i
+              >
+            </span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="side-menu" class="sidenav side-menu">
+      <ul>
+        <li>
+          <a href="/" class="waves-effect"
+            ><i class="material-icons">home</i>Home</a
+          >
+        </li>
+        <li>
+          <a href="/en/about" class="waves-effect"
+            ><i class="material-icons">business</i>About</a
+          >
+        </li>
+        <li>
+          <a href="/en/products" class="waves-effect"
+            ><i class="material-icons">camera</i>Products</a
+          >
+        </li>
+        <li></li>
+        <li>
+          <a href="/en/contact" class="waves-effect">
+            <i class="material-icons">mail_outline</i>Contact</a
+          >
+        </li>
+        <div class="divider"></div>
+
+        <li>
+          <a class="waves-effect waves-light btn blue" id="permission">
+            <i class="material-icons left white-text">notifications</i
+            >Notifications</a
+          >
+        </li>
+      </ul>
+
+      <div id="multiLang autoprefixer-test" class="input-field col s12">
+        <select class="icon">
+          <option value="" disabled selected>English</option>
+          <option value="1">French</option>
+          <option value="2">German</option>
+        </select>
+      </div>
+    </div>
+
+    <main>
+      <div id="map"></div>
+    </main>
+
+    <h1 class="center">Contact Us</h1>
+
+    <div class="contactForm">
+      <div class="row container">
+        <form
+          class="col s12"
+          id="myForm"
+          method="POST"
+          netlify-honeypot="bot-field"
+          netlify
+        >
+          <p style="display:none;">
+            <label>Don’t fill this out: <input name="bot-field"/></label>
+          </p>
+
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <label for="firstName">First Name</label>
+              <input
+                class="orderInput"
+                name="prénom"
+                id="firstName"
+                type="text"
+              />
+              <p>First Name is required and must be valid.</p>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <label for="lastName">Last Name</label>
+              <input class="orderInput" name="nom" id="lastName" type="text" />
+              <p>Last Name is required and must be valid.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <label for="address">Address</label>
+              <input
+                class="orderInput"
+                name="adresse"
+                id="address"
+                type="text"
+              />
+              <p>Address is required and must be valid.</p>
+            </div>
+            <div class="input-field col s7 m3 l3">
+              <label for="city">City</label>
+              <input class="orderInput" name="ville" id="city" type="text" />
+              <p>City is required and must be valid.</p>
+            </div>
+            <div class="input-field col s5 m3 l3">
+              <label for="zipCode">Zip Code</label>
+              <input
+                class="orderInput"
+                name="codePostale"
+                id="zipCode"
+                type="number"
+              />
+              <p>Zip Code is required and must be valid.</p>
+            </div>
+
+            <div class="input-field col s7 m6 l6">
+              <label for="email">Email</label>
+              <input class="orderInput" name="email" id="email" type="email" />
+              <p>
+                Email is required and must be a valid, e.g. me@mydomain.com.
+              </p>
+            </div>
+            <div class="input-field col s5 m6 l6">
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                class="orderInput"
+                name="téléphone"
+                id="phoneNumber"
+                type="tel"
+              />
+              <p>
+                Phone Number is required and must be a valid CH number, e.g
+                0799999999.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="product">Product</label>
+              <input
+                name="produit"
+                id="product"
+                type="text"
+                class="orderInput"
+              />
+              <p>
+                Product is required
+              </p>
+            </div>
+
+            <div class="input-field col s12">
+              <label for="informations">Informations</label>
+              <textarea
+                name="informations"
+                id="informations"
+                class="materialize-textarea orderInput"
+              ></textarea>
+              <p>
+                Only alphanumeric characters are allowed as well as frequent
+                characters.
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="right btn waves-effect waves-light blue white-text"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7fo-Oh6u9wvgtHBL3rhmEl0ol1GpKkJ8&callback=initContact"></script>
+</html>
